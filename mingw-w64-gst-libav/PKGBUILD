@@ -3,7 +3,7 @@
 _realname=gst-libav
 pkgbase=mingw-w64-${_realname}
 pkgname="${MINGW_PACKAGE_PREFIX}-${_realname}"
-pkgver=1.8.3
+pkgver=1.10.0
 pkgrel=1
 pkgdesc="GStreamer libav (mingw-w64)"
 arch=('any')
@@ -12,14 +12,13 @@ license=("LGPL")
 makedepends=("${MINGW_PACKAGE_PREFIX}-gcc"
              "${MINGW_PACKAGE_PREFIX}-pkg-config"
              "${MINGW_PACKAGE_PREFIX}-python2"
-             "yasm"
-            )
+             "yasm")
 depends=("${MINGW_PACKAGE_PREFIX}-bzip2"
          "${MINGW_PACKAGE_PREFIX}-gst-plugins-base"
          "${MINGW_PACKAGE_PREFIX}-gstreamer")
 options=(!libtool strip staticlibs)
 source=(${url}/src/${_realname}/${_realname}-${pkgver}.tar.xz)
-sha256sums=('9006a05990089f7155ee0e848042f6bb24e52ab1d0a59ff8d1b5d7e33001a495')
+sha256sums=('af98204411c78abb98233c1858f2886be6401304d24be218752bbbcede9bd85b')
 
 prepare() {
   cd ${srcdir}/${_realname}-${pkgver}

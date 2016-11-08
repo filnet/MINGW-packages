@@ -3,7 +3,7 @@
 _realname=gst-plugins-ugly
 pkgbase=mingw-w64-${_realname}
 pkgname="${MINGW_PACKAGE_PREFIX}-${_realname}"
-pkgver=1.8.3
+pkgver=1.10.0
 pkgrel=1
 pkgdesc="GStreamer Multimedia Framework Ugly Plugins (mingw-w64)"
 arch=('any')
@@ -11,8 +11,7 @@ url="https://gstreamer.freedesktop.org/"
 license=("LGPL")
 makedepends=("${MINGW_PACKAGE_PREFIX}-gcc"
             "${MINGW_PACKAGE_PREFIX}-pkg-config"
-            "${MINGW_PACKAGE_PREFIX}-python2"
-            )
+            "${MINGW_PACKAGE_PREFIX}-python2")
 depends=("${MINGW_PACKAGE_PREFIX}-a52dec"
          "${MINGW_PACKAGE_PREFIX}-gst-plugins-base"
          "${MINGW_PACKAGE_PREFIX}-gstreamer"
@@ -23,11 +22,10 @@ depends=("${MINGW_PACKAGE_PREFIX}-a52dec"
          "${MINGW_PACKAGE_PREFIX}-libcdio"
          "${MINGW_PACKAGE_PREFIX}-opencore-amr"
          "${MINGW_PACKAGE_PREFIX}-twolame"
-         "${MINGW_PACKAGE_PREFIX}-x264"
-        )
+         "${MINGW_PACKAGE_PREFIX}-x264")
 options=(!libtool strip staticlibs)
 source=(${url}/src/${_realname}/${_realname}-${pkgver}.tar.xz)
-sha256sums=('6fa2599fdd072d31fbaf50c34af406e2be944a010b1f4eab67a5fe32a0310693')
+sha256sums=('97de8d1903abb54305732e6b8781c8c42f5cc5a2a548a8f31b38c189e81a55e0')
 
 prepare() {
   cd ${srcdir}/${_realname}-${pkgver}

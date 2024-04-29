@@ -132,6 +132,8 @@ if test "${CI_MAKEPKG_RUN_CHECK+set}" = set; then
 else
     MAKEPKG_RUN_CHECK_FLAG='--nocheck'
 fi
+echo CI_MAKEPKG_RUN_CHECK=${CI_MAKEPKG_RUN_CHECK}
+#echo CI_MAKEPKG_RUN_CHECK=${env.CI_MAKEPKG_RUN_CHECK}
 
 message 'Building packages'
 for package in "${packages[@]}"; do

@@ -16,15 +16,18 @@ jobs:
       matrix:
         include: [
           { msystem: MINGW64, runner: windows-2022 },
-          { msystem: MINGW32, runner: windows-2022 },
-          { msystem: UCRT64, runner: windows-2022 },
-          { msystem: CLANG64, runner: windows-2022 },
-          { msystem: CLANG32, runner: windows-2022 },
+          #{ msystem: MINGW32, runner: windows-2022 },
+          #{ msystem: UCRT64, runner: windows-2022 },
+          #{ msystem: CLANG64, runner: windows-2022 },
+          #{ msystem: CLANG32, runner: windows-2022 },
           # { msystem: CLANGARM64, runner: ['Windows', 'ARM64', 'CI'] }
         ]
     name: ${{ matrix.msystem }}
     runs-on: ${{ matrix.runner }}
     steps:
+      - name: List env
+        run : env
+
       - name: Get CPU Name
         run : |
           Get-CIMInstance -Class Win32_Processor | Select-Object -Property Name
